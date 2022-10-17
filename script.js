@@ -571,3 +571,34 @@ function getMovies(keyword = '') {
 }
 
 getMovies('tHe');
+
+function showMovies(keyword = '') {
+  getMovies(keyword)
+
+  let movies = getMovies(keyword)
+  const elListMovies = document.getElementById('list-movies')
+  let ListMovies = ''
+
+  for (let i = 0; i < movies.length; i++) {
+    ListMovies += `
+    <div class="col">
+            <div class="p-3">
+                <div class="card" style="width: auto">
+                    <img src="${movies[i].poster_path}" class="card-img-top" alt="Exploits of a Young Don Juan">
+                    <div class="card-body">
+                    <div class="row">
+                      <h5 class="col-9 card-title">Title : ${movies[i].title}</h5>
+                      <p class="col-3 fs-5 fw-bold">${movies[i].vote_average}</p>
+                    </div>
+                      <p class="card-text">${movies[i].release_date}</p>
+                    </div>
+                  </div>
+            </div>
+          </div>`
+  }
+  elListMovies.innerHTML = ListMovies
+  //console.log(listMovies)
+
+}
+
+showMovies('the')
