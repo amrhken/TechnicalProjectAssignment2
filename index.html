@@ -16,13 +16,17 @@
                 <h1 class="fw-bold">MovieLovie</h1>
             </a>
               <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="What to watch ?" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Watch</button>
+                <input class="form-control me-2" type="search" placeholder="What to watch ?" aria-label="Search" id="searchs">
+              
+                <button class="btn btn-outline-success" type="button" id="search-btn">Watch</button>
               </form>
             </div>
           </nav>
     </header>
-
+    <div class="text-center d-none"  id="error-not-found">
+    <h1 style="text-align: center;">Movie not Found</h1>
+    <!--<img src="https://image.tmdb.org/t/p/w500/spCAxD99U1A6jsiePFoqdEcY0dG.jpg">-->
+    </div>
     <div class="container px-4 ">
         <div class="row gy-3 row-cols-1 row-cols-md-2 row-cols-lg-3 " id="list-movies">
             <div class="col">
